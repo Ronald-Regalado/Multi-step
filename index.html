@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<body>
+  <main>
+    <!-- Sidebar start -->
+    <nav id="navBar">
+      <ul>
+        <li class="step" id="step1">
+          <div class="number stepSelect">1</div>
+          <div class="stepInformation">
+            <h5 class="stepOrder"> Step 1</h5>
+            <div class="stepFunction"> YOUR INFO</div>
+          </div>
+        </li>
+        <li class="step" id="step2">
+          <div class="number">2</div>
+          <div class="stepInformation">
+            <h5 class="stepOrder">Step 2</h5>
+            <div class="stepFunction">SELECT PLAN</div>
+          </div>
+        </li>
+        <li class="step" id="step3">
+          <div class="number">3</div>
+          <div class="stepInformation">
+            <h5 class="stepOrder">Step 3</h5>
+            <div class="stepFunction">ADD-ONS</div>
+          </div>
+        </li>
+        <li class="step" id="step4">
+          <div class="number">4</div>
+          <div class="stepInformation">
+            <h5 class="stepOrder">Step 4</h5>
+            <div class="stepFunction"> SUMMARY
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!--Sidebar end -->
+    <div id="content">
+      <div id="sectionContainer">
+        <!-- Step 1 start -->
+        <section id="first_section" class="container ">
+          <div class="sectionTitle">Personal info</div>
+          <p class="greyText sectionDescription">Please provide your name, email address, and phone number.</p>
+          <div class="sectionContent">
+            <form id="formulario" action="">
+              <div id="name">
+                <div class="formName">
+                  <p>Name</p>
+                  <p class="incorrecto displayControl">This field is required</p>
+                </div>
+                <input id="input_name" type="text" name="name" placeholder="e.g. Stephen King">
+              </div>
+              <div id="email">
+                <div class="formName">
+                  <p>Email Address</p>
+                  <p class="incorrecto displayControl">This field is required</p>
+                </div>
+                <input id="input_email" type="email" name="email" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div id="phoneNumber">
+                <div class="formName">
+                  <p>Phone Number</p>
+                  <p class="incorrecto displayControl">This field is required</p>
+                </div>
+                <input id="input_phoneNumber" type="number" name="phoneNumber" placeholder="e.g +1 234 567 890">
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- Step 1 end -->
+        <!-- Step 2 start -->
+        <section id="second_section" class="container displayControl">
+          <div class="sectionTitle">Select your plan</div>
+          <p class="greyText sectionDescription"> You have the option of monthly or yearly billing.</p>
+          <div id="cardContainer" class="sectionContent">
+            <div id="arcadeCard" class="card">
+              <img src="./assets/images/icon-arcade.svg" alt="Loading...">
+              <div class="cardInformation">
+                <div   class="cardTitle modo" name="plan">Arcade</div>
+                <p class="cardprice time value"> $9/mo</p>
+                <p class="cardprice time  displayControl"> $90/yr</p>
+                <p class="cardFreeTime time  displayControl">2 month free</p>
+              </div>
+            </div>
+            <div id="avancedCard" class="card">
+              <img src="./assets/images/icon-advanced.svg" alt="Loading...">
+              <div class="cardInformation">
+                <div  class="cardTitle modo" name="plan"> Advanced</div>
+                <p class="cardprice time value"> $12/mo</p>
+                <p class="cardprice time  displayControl"> $120/yr</p>
+                <p class="cardFreeTime time displayControl">2 month free</p>
+              </div>
+            </div>
+            <div id="proCard" class="card">
+              <img src="/assets/images/icon-pro.svg" alt="Loading...">
+              <div class="cardInformation">
+                <div  class="cardTitle modo" name="plan"> Pro</div>
+                <p class="cardprice time value">$15/mo</p>
+                <p class="cardprice time  displayControl">$150/yr</p>
+                <p class="cardFreeTime time displayControl">2 month free</p>
+              </div>
+            </div>
+          </div>
+          <div class="cardTime greyText">
+            <span id="monthly" class="textSelect">Monthly</span>
+            <label for="checkbox" class="checkbox">
+              <input type="checkbox" id="checkbox">
+              <span class="round"></span>
+            </label>
+            <span id="yearly" class="">Yearly</span>
+          </div>
+        </section>
+        <!-- Step 2 end -->
+        <!-- Step 3 start -->
+        <section id="third_section" class="container displayControl">
+          <div class="sectionTitle"> Pick add-ons</div>
+          <p class="greyText sectionDescription"> Add-ons help enhance your gaming experience.</p>
+          <div class="sectionContent">
+            <div class="third_section_card ">
+              <input class="checkbox" type="checkbox">
+              <div class="third_cardText">
+                <p name="online" class="cardText_header blueText modo"> Online service</p>
+                <p class="cardtext_description greyText"> Access to multiplayer games</p>
+              </div>
+              <div class="price time value"> +$1/mo</div>
+              <div class="price time displayControl">+$10/yr</div>
+            </div>
+            <div class="third_section_card">
+              <input class="checkbox" type="checkbox">
+              <div class="third_cardText">
+                <p name="store" class="cardText_header blueText modo"> Larger storage</p>
+                <p class="cardtext_description greyText">Extra 1TB of cloud save</p>
+              </div>
+              <div class="price time value">+$2/mo</div>
+              <div class="price time displayControl">+$20/yr</div>
+            </div>
+            <div class="third_section_card">
+              <input class="checkbox" type="checkbox">
+              <div class="third_cardText blueText">
+                <p name="profile" class="cardText_header modo">Customizable Profile</p>
+                <p class="cardtext_description greyText">Custom theme on your profile</p>
+              </div>
+              <div class="price time value">+$2/mo</div>
+              <div class="price time displayControl">+$20/yr</div>
+            </div>
+          </div>
+        </section>
+        <!-- Step 3 end -->
+        <!-- Step 4 start -->
+        <section id="fourth_section" class="container displayControl">
+          <div class="sectionTitle">Finishing up</div>
+          <p class="greyText sectionDescription"> Double-check everything looks OK before confirming.</p>
+          <div id="resume" class="sectionContent">
+            <!-- Dynamically add subscription and add-on selections here -->
+            <div id="dinamicStep2" class="stepResume">
+              <div>
+                <div class="blueText"><span class="dinamicMode">Arcade </span>(<span class="dinamicTime">Monthly</span>)</div>
+                <p class="change greyText">change</p>
+              </div>
+              <div class="dinamicPrice">$9/mo</div>
+            </div>
+            <hr>
+            <div id="dinamicStep3" class="stepResume">
+              <div class="capsula">
+                <div id="online" class="option"></div>
+                <div id="onlinePrice" class="blueText dinamicPrice"></div>
+              </div>
+              <div class="capsula">
+                <div id="store" class="option"></div>
+                <div id="storePrice" class="blueText dinamicPrice"></div>
+              </div>
+              <div class="capsula">
+                <div id="profile" class="option"></div>
+                <div id="profilePrice" class="blueText dinamicPrice "></div>
+              </div>
+            </div>
+            <div id="total" class="stepResume">
+              <div class="greyText">Total(per <span class="dinamicTime">Monthly</span>)</div>
+              <div class="price" >+$<span id="totalValue"></span>/<span id="yr">mo</span></div>
+            </div>
+          </div>
+        </section>
+        <!-- Step 4 end -->
+        <!-- Step 5 start -->
+        <section id="finalStep" class="container displayControl ">
+          <img src="./assets/images/icon-thank-you.svg" alt="Loading...">
+          <div class="blueText"> Thank you!</div>
+          <p class="greyText sectionDescription">Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@loremgaming.com.
+          </p>
+        </section>
+        <!-- Step 5 end -->
+      </div>
+      <div id="moveBtn">
+        <button class="back greyText hidden">Go Back</button>
+        <button type="submit" class="next">Next Step</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+  <script type="module" src="./scr/script.js"></script>
+</body>
+
+</html>
